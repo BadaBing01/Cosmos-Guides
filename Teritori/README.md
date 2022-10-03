@@ -121,7 +121,7 @@ teritorid keys add <wallet name> --recover
 ## Create validator after sync
 ```
 teritorid tx staking create-validator \
---amount 10000000udws \
+--amount 10000000utori \
 --moniker <validator name> \
 --commission-max-change-rate "0.10" \
 --commission-max-rate "0.20" \

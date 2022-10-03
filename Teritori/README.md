@@ -134,6 +134,6 @@ teritorid tx staking create-validator \
 --from <wallet name>
 -y
 ```
-### Important save priv_validator_key.json file from .deweb/config/
+### Important save priv_validator_key.json file from .teritorid/config/
 ### It is the only way to recover your validator if something happens to your the server
 ___

@@ -129,7 +129,7 @@ teritorid tx staking create-validator \
 --identity="<for validator logo>" \
 --details="<description>" \
 --website="" \
---pubkey $(dewebd tendermint show-validator) \
+--pubkey $(teritorid tendermint show-validator) \
 --chain-id teritori-1 \
 --from <wallet name>
 -y

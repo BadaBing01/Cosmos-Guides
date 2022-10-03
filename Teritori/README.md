@@ -117,7 +117,6 @@ teritorid keys add <wallet name>
 
 teritorid keys add <wallet name> --recover
 ```
-## Fund your wallet in [Discord](https://discord.gg/teritori)
 ## Create validator after sync
 ```
 teritorid tx staking create-validator \

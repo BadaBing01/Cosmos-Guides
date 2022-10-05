@@ -1,5 +1,5 @@
-# Teritori Node Setup Guide
-* https://teritori.com/
+# Teritori Mainnet Node Setup Guide
+* https://teritori.com
 
 ## Don't forget to remove those <> symbols and enter your own values
 ## Values in "" remain in ""

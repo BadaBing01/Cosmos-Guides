@@ -130,8 +130,8 @@ noisd tx staking create-validator \
 --identity="<for validator logo>" \
 --details="<description>" \
 --website="" \
---pubkey $(empowerd tendermint show-validator) \
---chain-id altruistic-1 \
+--pubkey $(noisd tendermint show-validator) \
+--chain-id nois-testnet-003 \
 --from <wallet name>
 -y
 ```

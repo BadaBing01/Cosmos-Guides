@@ -120,9 +120,11 @@ nibid keys add <wallet name> --recover
 ```
 ## Fund your wallet in [Discord](https://discord.gg/m8q6JJUvUC) or
 
+```
 FAUCET_URL="https://faucet.testnet-1.nibiru.fi/"
 ADDR="<Wallet Address>" 
 curl -X POST -d '{"address": "'"$ADDR"'", "coins": ["10000000unibi","100000000000unusd"]}' $FAUCET_URL
+```
 
 ## Create validator after sync
 ```

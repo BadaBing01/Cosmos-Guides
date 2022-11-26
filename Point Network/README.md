@@ -41,7 +41,6 @@ pointd init <Node Name> --chain-id point_10687-1
 ```
 wget https://raw.githubusercontent.com/pointnetwork/point-chain-config/main/mainnet-1/genesis.json
 
-
 wget https://raw.githubusercontent.com/pointnetwork/point-chain-config/main/mainnet-1/config.toml
 
 mv config.toml genesis.json ~/.pointd/config/

@@ -14,10 +14,9 @@ Example:   --details="<description>"   --> --details="Independet validator"
 sudo apt update && sudo apt upgrade -y && \
 sudo apt install curl tar wget clang pkg-config libssl-dev libleveldb-dev jq build-essential bsdmainutils git make ncdu htop screen unzip bc fail2ban htop -y
 ```
-## Install go 1.18.3
+## Install go 1.19
 ```
-ver="1.18.3" && \
-cd $HOME && \
+ver="1.19" && \
 wget "https://golang.org/dl/go$ver.linux-amd64.tar.gz" && \
 sudo rm -rf /usr/local/go && \
 sudo tar -C /usr/local -xzf "go$ver.linux-amd64.tar.gz" && \

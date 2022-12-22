@@ -30,26 +30,28 @@ go version
 ```
 cd $HOME && git clone https://github.com/NibiruChain/nibiru && \
 cd nibiru && \
-git checkout v0.15.0 && \
+git checkout v0.16.2 && \
 make install
 ```
 ## Init node
 ```
-nibid init <Node name> --chain-id=nibiru-testnet-1 --home $HOME/.nibid
+nibid init <Node name> --chain-id=nibiru-testnet-2 --home $HOME/.nibid
 
-nibid config chain-id nibiru-testnet-1
+nibid config chain-id nibiru-testnet-2
 ```
 ## Download genesis file
 ```
-curl -s https://rpc.testnet-1.nibiru.fi/genesis | jq -r .result.genesis > genesis.json
+curl -s https://rpc.testnet-2.nibiru.fi/genesis | jq -r .result.genesis > $HOME/.nibid/config/genesis.json
 
 cp genesis.json $HOME/.nibid/config/genesis.json
 ```
-## Peers
+## Peers/Seeds
 ```
-peers="37713248f21c37a2f022fbbb7228f02862224190@35.243.130.198:26656,ff59bff2d8b8fb6114191af7063e92a9dd637bd9@35.185.114.96:26656,cb431d789fe4c3f94873b0769cb4fce5143daf97@35.227.113.63:26656"
+peers="d5519e378247dfb61dfe90652d1fe3e2b3005a5b@65.109.68.190:39656,8fc35f8c603f2d7752ad3af0a93b12beffc556bb@144.76.30.36:15652,2ec6cb2a83c178fb490a992a3bd6a5c142c3fc61@135.181.20.30:26656,c65d746f84ef55510accfd49e6df224eb942e1f5@35.229.57.190:26656"
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" $HOME/.nibid/config/config.toml
 
+seeds="dabcc13d6274f4dd86fd757c5c4a632f5062f817@seed-2.nibiru-testnet-2.nibiru.fi:26656,a5383b33a6086083a179f6de3c51434c5d81c69d@seed-1.nibiru-testnet-2.nibiru.fi:26656"
+sed -i.bak -e "s/^seeds =.*/seeds = \"$seeds\"/" $HOME/.nibid/config/config.toml
 ```
 ## Indexing/Pruning/Minimum gas price
 ```
@@ -121,7 +123,7 @@ nibid keys add <wallet name> --recover
 ## Fund your wallet in [Discord](https://discord.gg/m8q6JJUvUC) or
 
 ```
-FAUCET_URL="https://faucet.testnet-1.nibiru.fi/"
+FAUCET_URL="https://faucet.testnet-2.nibiru.fi/"
 ADDR="<Wallet Address>" 
 curl -X POST -d '{"address": "'"$ADDR"'", "coins": ["10000000unibi","100000000000unusd"]}' $FAUCET_URL
 ```
@@ -138,8 +140,8 @@ nibid tx staking create-validator \
 --identity="<for validator logo>" \
 --details="<description>" \
 --website="" \
---pubkey $(empowerd tendermint show-validator) \
---chain-id nibiru-testnet-1 \
+--pubkey $(nibid tendermint show-validator) \
+--chain-id nibiru-testnet-2 \
 --from <wallet name>
 --fees 250unibi
 -y

@@ -75,7 +75,7 @@ sed -i.bak -e "s/^inter-block-cache *=.*/inter-block-cache = \"$inter_block_cach
 ```
 ## Download addrbook
 ```
-wget -O $HOME/.okp4d/config/addrbook.json "https://raw.githubusercontent.com/BadaBing01/Cosmos-Chains-Sync/main/okp4/addrbook.json"
+wget -O $HOME/.okp4d/config/addrbook.json "https://raw.githubusercontent.com/BadaBing01/Cosmos-Chains-Sync/main/OKP4/addrbook.json"
 ```
 ## Service file
 ```
@@ -116,7 +116,7 @@ okp4d keys add <wallet name>
 
 okp4d keys add <wallet name> --recover
 ```
-## Fund your wallet in [Discord](https://discord.gg/DNB4z8EZDx)
+## Fund your wallet in [Discord](https://discord.gg/okp4)
 ## Create validator after sync
 ```
 okp4d tx staking create-validator \

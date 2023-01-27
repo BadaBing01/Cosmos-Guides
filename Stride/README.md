@@ -28,7 +28,7 @@ go version
 ## Clone and install binaries
 ```
 git clone https://github.com/Stride-Labs/stride.git && cd stride && \
-git checkout v4.0.2 && \
+git checkout v5.1.1 && \
 make install
 ```
 ## Init node

@@ -80,12 +80,12 @@ wget -O $HOME/.dymension/config/addrbook.json ""
 ```
 sudo tee /etc/systemd/system/dymd.service > /dev/null <<EOF
 [Unit]
-Description=strided
+Description=dymd
 After=network-online.target
 
 [Service]
 User=$USER
-ExecStart=$(which strided) start
+ExecStart=$(which dymd) start
 Restart=on-failure
 RestartSec=3
 LimitNOFILE=65535

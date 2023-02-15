@@ -74,7 +74,7 @@ sed -i.bak -e "s/^inter-block-cache *=.*/inter-block-cache = \"$inter_block_cach
 ```
 ## Download addrbook
 ```
-wget -O $HOME/.dymension/config/addrbook.json ""
+wget -O $HOME/.dymension/config/addrbook.json "https://raw.githubusercontent.com/BadaBing01/Cosmos-Chains-Sync/main/Dymension/addrbook.json"
 ```
 ## Service file
 ```

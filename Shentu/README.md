@@ -4,7 +4,7 @@
 ## Don't forget to remove those <> symbols and enter your own values
 ## Values in "" remain in ""
 ```
-Example: certik keys add <wallet name> --> certik keys add wallet
+Example: shentud keys add <wallet name> --> shentud keys add wallet
 
 Example:   --details="<description>"   --> --details="Independet validator"
 ```

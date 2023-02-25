@@ -39,7 +39,7 @@ shentud init <Node Name> --chain-id shentu2.2
 ## Download genesis file
 ```
 cd
-wget -O $HOME/.certik/config/genesis.json "https://raw.githubusercontent.com/ShentuChain/mainnet/main/shentu-2.2/genesis.json"
+wget -O $HOME/.shentud/config/genesis.json "https://raw.githubusercontent.com/ShentuChain/mainnet/main/shentu-2.2/genesis.json"
 ```
 ## Seeds/Peers
 ```
@@ -47,7 +47,7 @@ peers=b0690ba7a9cf755fc46486d45b5fd30d0da443de@78.47.143.61:26656,5b73f98db91d00
 sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$peers\"/" $HOME/.shentud/config/config.toml
 
 seeds="ade4d8bc8cbe014af6ebdf3cb7b1e9ad36f412c0@seeds.polkachu.com:14056"
-sed -i.bak -e "s/^seeds =.*/seeds = \"$seeds\"/" $HOME/.certik/config/config.toml
+sed -i.bak -e "s/^seeds =.*/seeds = \"$seeds\"/" $HOME/.shentud/config/config.toml
 ```
 ## Indexing/Pruning/Minimum gas price
 ```
@@ -74,7 +74,7 @@ sed -i.bak -e "s/^inter-block-cache *=.*/inter-block-cache = \"$inter_block_cach
 ```
 ## Download addrbook
 ```
-wget -O $HOME/.certik/config/addrbook.json "https://raw.githubusercontent.com/BadaBing01/Cosmos-Chains-Sync/main/Shentu/addrbook.json"
+wget -O $HOME/.shentud/config/addrbook.json "https://raw.githubusercontent.com/BadaBing01/Cosmos-Chains-Sync/main/Shentu/addrbook.json"
 ```
 ## Service file
 ```

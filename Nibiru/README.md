@@ -29,20 +29,18 @@ go version
 ```
 cd $HOME && git clone https://github.com/NibiruChain/nibiru && \
 cd nibiru && \
-git checkout v0.16.3 && \
+git checkout v0.19.2 && \
 make install
 ```
 ## Init node
 ```
-nibid init <Node name> --chain-id=nibiru-testnet-2 --home $HOME/.nibid
+nibid init <Node name> --chain-id=nibiru-itn-1 --home $HOME/.nibid
 
-nibid config chain-id nibiru-testnet-2
+nibid config chain-id nibiru-itn-1
 ```
 ## Download genesis file
 ```
-curl -s https://rpc.testnet-2.nibiru.fi/genesis | jq -r .result.genesis > $HOME/.nibid/config/genesis.json
-
-cp genesis.json $HOME/.nibid/config/genesis.json
+wget -O $HOME/.nibid/config/genesis.json "https://raw.githubusercontent.com/obajay/nodes-Guides/main/Nibiru/genesis.json"
 ```
 ## Peers/Seeds
 ```
@@ -122,7 +120,7 @@ nibid keys add <wallet name> --recover
 ## Fund your wallet in [Discord](https://discord.gg/m8q6JJUvUC) or
 
 ```
-FAUCET_URL="https://faucet.testnet-2.nibiru.fi/"
+FAUCET_URL="https://faucet.itn-1.nibiru.fi/"
 ADDR="<Wallet Address>" 
 curl -X POST -d '{"address": "'"$ADDR"'", "coins": ["10000000unibi","100000000000unusd"]}' $FAUCET_URL
 ```
@@ -140,7 +138,7 @@ nibid tx staking create-validator \
 --details="<description>" \
 --website="" \
 --pubkey $(nibid tendermint show-validator) \
---chain-id nibiru-testnet-2 \
+--chain-id nibiru-itn-1 \
 --from <wallet name>
 --fees 250unibi
 -y
